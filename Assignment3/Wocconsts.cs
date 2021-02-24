@@ -20,7 +20,7 @@ namespace Assignment3
         Warlock, Rogue, Paladin, Hunter, Shaman
     };
 
-    public enum Role { Tank, DPS, Healer };
+    public enum Role { Tank, Healer, Damage  };
 
     public enum GuildType { Casual, Questing, MythicPls, Raiding, PVP };
 
@@ -35,15 +35,15 @@ namespace Assignment3
 
         public static Dictionary<Class, List<Role>> allowedRolls = new Dictionary<Class, List<Role>>() //dictionary contining lists of allowed roles for each race
         {
-            { Class.Warrior, new List<Role>{ Role.Tank, Role.DPS } },
-            { Class.Mage, new List<Role>{ Role.DPS } },
-            { Class.Druid, new List<Role>{ Role.Tank, Role.Healer, Role.DPS } },
-            { Class.Priest, new List<Role>{ Role.Healer, Role.DPS } },
-            { Class.Warlock, new List<Role>{ Role.DPS } },
-            { Class.Rogue, new List<Role>{ Role.DPS } },
-            { Class.Paladin, new List<Role>{ Role.Tank, Role.Healer, Role.DPS } },
-            { Class.Hunter, new List<Role>{ Role.DPS } },
-            { Class.Shaman, new List<Role>{ Role.Healer, Role.DPS } }
+            { Class.Warrior, new List<Role>{ Role.Tank, Role.Damage } },
+            { Class.Mage, new List<Role>{ Role.Damage } },
+            { Class.Druid, new List<Role>{ Role.Tank, Role.Healer, Role.Damage } },
+            { Class.Priest, new List<Role>{ Role.Healer, Role.Damage } },
+            { Class.Warlock, new List<Role>{ Role.Damage } },
+            { Class.Rogue, new List<Role>{ Role.Damage } },
+            { Class.Paladin, new List<Role>{ Role.Tank, Role.Healer, Role.Damage } },
+            { Class.Hunter, new List<Role>{ Role.Damage } },
+            { Class.Shaman, new List<Role>{ Role.Healer, Role.Damage } }
         };
     }
 
