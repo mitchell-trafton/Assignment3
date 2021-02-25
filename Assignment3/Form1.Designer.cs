@@ -41,11 +41,11 @@ namespace Assignment3
             this.ServerClassType_lbl = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.ServerClassType_pnl = new System.Windows.Forms.Panel();
-            this.RolePercentage_pnl = new System.Windows.Forms.Panel();
-            this.RolePercentage_server_cbx = new System.Windows.Forms.ComboBox();
-            this.RolePercentage_lbl = new System.Windows.Forms.Label();
-            this.RolePercentage_server_lbl = new System.Windows.Forms.Label();
-            this.RolePercentage_submit_btn = new System.Windows.Forms.Button();
+            this.RacePercentage_pnl = new System.Windows.Forms.Panel();
+            this.RacePercentage_server_cbx = new System.Windows.Forms.ComboBox();
+            this.RacePercentage_lbl = new System.Windows.Forms.Label();
+            this.RacePercentage_server_lbl = new System.Windows.Forms.Label();
+            this.RacePercentage_submit_btn = new System.Windows.Forms.Button();
             this.LvlRange_pnl = new System.Windows.Forms.Panel();
             this.LvlRange_server_cbx = new System.Windows.Forms.ComboBox();
             this.LvlRange_lbl = new System.Windows.Forms.Label();
@@ -74,7 +74,7 @@ namespace Assignment3
             ((System.ComponentModel.ISupportInitialize)(this.LvlRange_min_nud)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.ServerClassType_pnl.SuspendLayout();
-            this.RolePercentage_pnl.SuspendLayout();
+            this.RacePercentage_pnl.SuspendLayout();
             this.LvlRange_pnl.SuspendLayout();
             this.GuildType_pnl.SuspendLayout();
             this.CouldFill_pnl.SuspendLayout();
@@ -189,7 +189,7 @@ namespace Assignment3
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.ServerClassType_pnl);
-            this.flowLayoutPanel1.Controls.Add(this.RolePercentage_pnl);
+            this.flowLayoutPanel1.Controls.Add(this.RacePercentage_pnl);
             this.flowLayoutPanel1.Controls.Add(this.LvlRange_pnl);
             this.flowLayoutPanel1.Controls.Add(this.GuildType_pnl);
             this.flowLayoutPanel1.Controls.Add(this.CouldFill_pnl);
@@ -213,56 +213,57 @@ namespace Assignment3
             this.ServerClassType_pnl.Size = new System.Drawing.Size(489, 97);
             this.ServerClassType_pnl.TabIndex = 0;
             // 
-            // RolePercentage_pnl
+            // RacePercentage_pnl
             // 
-            this.RolePercentage_pnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.RolePercentage_pnl.Controls.Add(this.RolePercentage_server_cbx);
-            this.RolePercentage_pnl.Controls.Add(this.RolePercentage_lbl);
-            this.RolePercentage_pnl.Controls.Add(this.RolePercentage_server_lbl);
-            this.RolePercentage_pnl.Controls.Add(this.RolePercentage_submit_btn);
-            this.RolePercentage_pnl.Location = new System.Drawing.Point(3, 106);
-            this.RolePercentage_pnl.Name = "RolePercentage_pnl";
-            this.RolePercentage_pnl.Size = new System.Drawing.Size(489, 97);
-            this.RolePercentage_pnl.TabIndex = 1;
+            this.RacePercentage_pnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.RacePercentage_pnl.Controls.Add(this.RacePercentage_server_cbx);
+            this.RacePercentage_pnl.Controls.Add(this.RacePercentage_lbl);
+            this.RacePercentage_pnl.Controls.Add(this.RacePercentage_server_lbl);
+            this.RacePercentage_pnl.Controls.Add(this.RacePercentage_submit_btn);
+            this.RacePercentage_pnl.Location = new System.Drawing.Point(3, 106);
+            this.RacePercentage_pnl.Name = "RacePercentage_pnl";
+            this.RacePercentage_pnl.Size = new System.Drawing.Size(489, 97);
+            this.RacePercentage_pnl.TabIndex = 1;
             // 
-            // RolePercentage_server_cbx
+            // RacePercentage_server_cbx
             // 
-            this.RolePercentage_server_cbx.FormattingEnabled = true;
-            this.RolePercentage_server_cbx.Location = new System.Drawing.Point(159, 48);
-            this.RolePercentage_server_cbx.Name = "RolePercentage_server_cbx";
-            this.RolePercentage_server_cbx.Size = new System.Drawing.Size(121, 21);
-            this.RolePercentage_server_cbx.TabIndex = 4;
+            this.RacePercentage_server_cbx.FormattingEnabled = true;
+            this.RacePercentage_server_cbx.Location = new System.Drawing.Point(159, 48);
+            this.RacePercentage_server_cbx.Name = "RacePercentage_server_cbx";
+            this.RacePercentage_server_cbx.Size = new System.Drawing.Size(121, 21);
+            this.RacePercentage_server_cbx.TabIndex = 4;
             // 
-            // RolePercentage_lbl
+            // RacePercentage_lbl
             // 
-            this.RolePercentage_lbl.AutoSize = true;
-            this.RolePercentage_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RolePercentage_lbl.ForeColor = System.Drawing.SystemColors.Control;
-            this.RolePercentage_lbl.Location = new System.Drawing.Point(6, 7);
-            this.RolePercentage_lbl.Name = "RolePercentage_lbl";
-            this.RolePercentage_lbl.Size = new System.Drawing.Size(351, 17);
-            this.RolePercentage_lbl.TabIndex = 0;
-            this.RolePercentage_lbl.Text = "Percentage of Each Race From a Single Server";
+            this.RacePercentage_lbl.AutoSize = true;
+            this.RacePercentage_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RacePercentage_lbl.ForeColor = System.Drawing.SystemColors.Control;
+            this.RacePercentage_lbl.Location = new System.Drawing.Point(6, 7);
+            this.RacePercentage_lbl.Name = "RacePercentage_lbl";
+            this.RacePercentage_lbl.Size = new System.Drawing.Size(351, 17);
+            this.RacePercentage_lbl.TabIndex = 0;
+            this.RacePercentage_lbl.Text = "Percentage of Each Race From a Single Server";
             // 
-            // RolePercentage_server_lbl
+            // RacePercentage_server_lbl
             // 
-            this.RolePercentage_server_lbl.AutoSize = true;
-            this.RolePercentage_server_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RolePercentage_server_lbl.ForeColor = System.Drawing.SystemColors.Control;
-            this.RolePercentage_server_lbl.Location = new System.Drawing.Point(156, 28);
-            this.RolePercentage_server_lbl.Name = "RolePercentage_server_lbl";
-            this.RolePercentage_server_lbl.Size = new System.Drawing.Size(50, 17);
-            this.RolePercentage_server_lbl.TabIndex = 3;
-            this.RolePercentage_server_lbl.Text = "Server";
+            this.RacePercentage_server_lbl.AutoSize = true;
+            this.RacePercentage_server_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RacePercentage_server_lbl.ForeColor = System.Drawing.SystemColors.Control;
+            this.RacePercentage_server_lbl.Location = new System.Drawing.Point(156, 28);
+            this.RacePercentage_server_lbl.Name = "RacePercentage_server_lbl";
+            this.RacePercentage_server_lbl.Size = new System.Drawing.Size(50, 17);
+            this.RacePercentage_server_lbl.TabIndex = 3;
+            this.RacePercentage_server_lbl.Text = "Server";
             // 
-            // RolePercentage_submit_btn
+            // RacePercentage_submit_btn
             // 
-            this.RolePercentage_submit_btn.Location = new System.Drawing.Point(334, 46);
-            this.RolePercentage_submit_btn.Name = "RolePercentage_submit_btn";
-            this.RolePercentage_submit_btn.Size = new System.Drawing.Size(96, 23);
-            this.RolePercentage_submit_btn.TabIndex = 5;
-            this.RolePercentage_submit_btn.Text = "Show Results";
-            this.RolePercentage_submit_btn.UseVisualStyleBackColor = true;
+            this.RacePercentage_submit_btn.Location = new System.Drawing.Point(334, 46);
+            this.RacePercentage_submit_btn.Name = "RacePercentage_submit_btn";
+            this.RacePercentage_submit_btn.Size = new System.Drawing.Size(96, 23);
+            this.RacePercentage_submit_btn.TabIndex = 5;
+            this.RacePercentage_submit_btn.Text = "Show Results";
+            this.RacePercentage_submit_btn.UseVisualStyleBackColor = true;
+            this.RacePercentage_submit_btn.Click += new System.EventHandler(this.RacePercentage_submit_btn_Click);
             // 
             // LvlRange_pnl
             // 
@@ -540,8 +541,8 @@ namespace Assignment3
             this.flowLayoutPanel1.ResumeLayout(false);
             this.ServerClassType_pnl.ResumeLayout(false);
             this.ServerClassType_pnl.PerformLayout();
-            this.RolePercentage_pnl.ResumeLayout(false);
-            this.RolePercentage_pnl.PerformLayout();
+            this.RacePercentage_pnl.ResumeLayout(false);
+            this.RacePercentage_pnl.PerformLayout();
             this.LvlRange_pnl.ResumeLayout(false);
             this.LvlRange_pnl.PerformLayout();
             this.GuildType_pnl.ResumeLayout(false);
@@ -570,11 +571,11 @@ namespace Assignment3
         private System.Windows.Forms.Label LvlRange_min_lbl;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel ServerClassType_pnl;
-        private System.Windows.Forms.Panel RolePercentage_pnl;
-        private System.Windows.Forms.ComboBox RolePercentage_server_cbx;
-        private System.Windows.Forms.Label RolePercentage_lbl;
-        private System.Windows.Forms.Label RolePercentage_server_lbl;
-        private System.Windows.Forms.Button RolePercentage_submit_btn;
+        private System.Windows.Forms.Panel RacePercentage_pnl;
+        private System.Windows.Forms.ComboBox RacePercentage_server_cbx;
+        private System.Windows.Forms.Label RacePercentage_lbl;
+        private System.Windows.Forms.Label RacePercentage_server_lbl;
+        private System.Windows.Forms.Button RacePercentage_submit_btn;
         private System.Windows.Forms.Panel LvlRange_pnl;
         private System.Windows.Forms.ComboBox LvlRange_server_cbx;
         private System.Windows.Forms.Label LvlRange_lbl;

@@ -30,7 +30,7 @@ namespace Assignment3
                 if (!ServerClassType_server_cbx.Items.Contains(g.Server))
                 {
                     ServerClassType_server_cbx.Items.Add(g.Server);
-                    RolePercentage_server_cbx.Items.Add(g.Server);
+                    RacePercentage_server_cbx.Items.Add(g.Server);
                     LvlRange_server_cbx.Items.Add(g.Server);
                 }
 
@@ -60,6 +60,26 @@ namespace Assignment3
              * was selected.
              *****************************************************************/
             role_rbtn_selection = (Role)((RadioButton)sender).TabIndex;
+        }
+
+        private void RacePercentage_submit_btn_Click(object sender, EventArgs e)
+        {
+            /****************************************************************
+             * onClick handler for RacePercentage_submit_btn.
+             * 
+             * Checks for a server selection from RacePercentage_Server_cbx, 
+             * and displays data in query_text based on the output from 
+             * GameFile.racePercent() based on that selection.
+             ****************************************************************/
+
+            if (RacePercentage_server_cbx.SelectedIndex == -1)
+            {//if there is no server selected, display an appropriate error popup and return
+                System.Windows.Forms.MessageBox.Show("Please select a server.");
+                return;
+            }
+
+            foreach (string outLine in Globals.game.racePercent(RacePercentage_server_cbx.SelectedItem.ToString()))
+                query_txt.AppendText(outLine + Environment.NewLine);
         }
     }
 }
