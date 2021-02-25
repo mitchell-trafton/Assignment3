@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Globalization;
 using System.Linq;
 /************************************************************
 * Assignment 3
@@ -116,8 +117,8 @@ namespace Assignment3
                         id = UInt32.Parse(subs[0]);
                         name = subs[1];
                         race = Int32.Parse(subs[2]);
-                        role = UInt32.Parse(subs[3]);
-                        cclass = Int32.Parse(subs[4]);
+                        cclass = Int32.Parse(subs[3]);
+                        role = UInt32.Parse(subs[4]);
                         level = UInt32.Parse(subs[5]);
                         exp = UInt32.Parse(subs[6]);
                         if (subs[7] == "") guildID = null;
@@ -673,7 +674,7 @@ namespace Assignment3
             foreach(KeyValuePair<string,int> tally in raceTally)
             {
                 double percentage = tally.Value / totalPlayers;
-                guildList.Add(tally.Key + "\t \t " + percentage);
+                guildList.Add(tally.Key + "\t \t " + percentage.ToString("P", CultureInfo.InvariantCulture));
             }
             return guildList;
 
@@ -800,7 +801,7 @@ namespace Assignment3
                 }
                 //this is a catch to make sure we don't devide by zero. if we find it, take the default of zero
                 if (maxlevels != 0 && totalMembers != 0) maxlevels = maxlevels / totalMembers;
-                classArray.Add(guild.Value.Name + "\t\t" + maxlevels);
+               classArray.Add(String.Format("{0}{1}", guild.Value.Name.PadRight(30), maxlevels.ToString("P", CultureInfo.InvariantCulture).PadLeft(10)));
             }
             return classArray;
 
