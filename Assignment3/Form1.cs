@@ -125,5 +125,25 @@ namespace Assignment3
                                                              (uint)LvlRange_min_nud.Value, (uint)LvlRange_max_nud.Value))
                 query_txt.AppendText(outLine + Environment.NewLine);
         }
+
+        private void GuildType_submit_btn_Click(object sender, EventArgs e)
+        {
+            /****************************************************************
+             * onClick handler for GuildType_submit_btn.
+             * 
+             * Checks for a type selection from GuildType_type_cbx
+             * and displays data in query_text based on the output from 
+             * GameFile.GuildTypePrint() based on that selection.
+             ****************************************************************/
+
+            if (GuildType_type_cbx.SelectedIndex == -1)
+            {//if there is no type selected, display an appropriate error popup and return
+                System.Windows.Forms.MessageBox.Show("Please select a type.");
+                return;
+            }
+
+            foreach (string outLine in Globals.game.GuildTypePrint((GuildType)GuildType_type_cbx.SelectedIndex))
+                query_txt.AppendText(outLine + Environment.NewLine);
+        }
     }
 }

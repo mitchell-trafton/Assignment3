@@ -393,6 +393,7 @@ namespace Assignment3
             this.GuildType_submit_btn.TabIndex = 5;
             this.GuildType_submit_btn.Text = "Show Results";
             this.GuildType_submit_btn.UseVisualStyleBackColor = true;
+            this.GuildType_submit_btn.Click += new System.EventHandler(this.GuildType_submit_btn_Click);
             // 
             // CouldFill_pnl
             // 
