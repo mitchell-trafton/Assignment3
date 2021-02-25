@@ -600,7 +600,7 @@ namespace Assignment3
          * a list of all of the users in said server
          * 
          ************************************************************************/
-        public ArrayList classCount(Class pClass, string server)
+        public ArrayList ClassCount(Class pClass, string server)
         {
             ArrayList classArray = new ArrayList();
             var guildQuery =
@@ -636,7 +636,7 @@ namespace Assignment3
          * to find all the players of those guilds. it then groups and counts those
          * players by race
          ************************************************************************/
-        public ArrayList racePercent(string server)
+        public ArrayList RacePercent(string server)
         {
             ArrayList guildList = new ArrayList();
             double totalPlayers = 0;
@@ -669,16 +669,68 @@ namespace Assignment3
                 }
             }
             //Now that our Querying is done we need to change it into an array of strings and pass it off
-            guildList.Add("percentage of races for" + server + " server \n");
+            guildList.Add("percentage of races for " + server + " server \n");
             foreach(KeyValuePair<string,int> tally in raceTally)
             {
                 double percentage = tally.Value / totalPlayers;
-                guildList.Add(tally.Key + "\t" + percentage);
+                guildList.Add(tally.Key + "\t \t " + percentage);
             }
             return guildList;
 
         }
+        /************************************************************************
+         * roleCall
+         * input: Role, string(Server name) uint (Minimum level) uint (Maximum level)
+         * output: ArrayList(String)
+         * Purpose: To provide a list of all the characters that meet the search 
+         * criteria listed by the user and return that as an array list of strings
+         * to be printed
+         ***********************************************************************/
 
+        public ArrayList RoleCall(Role role, string server, uint min, uint max)
+        {
+            ArrayList classArray = new ArrayList();
+            var guildQuery =
+               from S in Globals.guilds
+               where S.Value.Server.CompareTo(server) == 0
+               select S.Key;// we store the names of those guilds in the servers in the serverQuery Var
+            classArray.Add("List of Players in " + role + " in " + server + " between levels " + min + " and " + max + "\n");
+            foreach (uint gId in guildQuery)
+            {
+                var playerQuery =
+                    from S in Globals.characters
+                    where S.Value.GuildID == gId && S.Value.Role == role && S.Value.Level >= min && S.Value.Level <= max
+                    select S;
+                foreach (var player in playerQuery)
+                {
+                    classArray.Add(player.Value.ToString());
+                }
+            }
+            return classArray;
+        }
+
+        /*****************************************************
+         * GuildTypePrint
+         * input: GuildType
+         * output: ArrayList (String)
+         * purpose: to list off all the guilds of the type 
+         * selected by the user
+         * 
+         ****************************************************/
+        public ArrayList GuildTypePrint(GuildType type)
+        {
+            ArrayList classArray = new ArrayList();
+            var guildQuery =
+                from S in Globals.guilds
+                where S.Value.Type == type
+                select S;
+            classArray.Add("List of all guilds of type: " + type);
+            foreach(var guild in guildQuery)
+            {
+                classArray.Add(guild.Value.ToString());
+            }
+            return classArray;
+        }
         
     }
 }
