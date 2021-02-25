@@ -136,6 +136,7 @@ namespace Assignment3
             this.ServerClassType_submit_btn.TabIndex = 5;
             this.ServerClassType_submit_btn.Text = "Show Results";
             this.ServerClassType_submit_btn.UseVisualStyleBackColor = true;
+            this.ServerClassType_submit_btn.Click += new System.EventHandler(this.ServerClassType_submit_btn_Click);
             // 
             // ServerClassType_server_cbx
             // 

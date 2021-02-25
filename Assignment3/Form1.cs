@@ -78,7 +78,28 @@ namespace Assignment3
                 return;
             }
 
-            foreach (string outLine in Globals.game.racePercent(RacePercentage_server_cbx.SelectedItem.ToString()))
+            foreach (string outLine in Globals.game.RacePercent(RacePercentage_server_cbx.SelectedItem.ToString()))
+                query_txt.AppendText(outLine + Environment.NewLine);
+        }
+
+        private void ServerClassType_submit_btn_Click(object sender, EventArgs e)
+        {
+            /****************************************************************
+             * onClick handler for ServerClassType_submit_btn.
+             * 
+             * Checks for a class and server selection from 
+             * ServerClassType_class_cbx and ServerClassType_server_cbx, 
+             * and displays data in query_text based on the output from 
+             * GameFile.classCount() based on those selections.
+             ****************************************************************/
+
+            if (ServerClassType_class_cbx.SelectedIndex == -1 || ServerClassType_server_cbx.SelectedIndex == -1)
+            {//if there is no class or server selected, display an appropriate error popup and return
+                System.Windows.Forms.MessageBox.Show("Please select a class and server.");
+                return;
+            }
+
+            foreach (string outLine in Globals.game.ClassCount((Class)ServerClassType_class_cbx.SelectedIndex, ServerClassType_server_cbx.SelectedItem.ToString()))
                 query_txt.AppendText(outLine + Environment.NewLine);
         }
     }
