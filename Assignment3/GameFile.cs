@@ -731,19 +731,77 @@ namespace Assignment3
             }
             return classArray;
         }
-        
+
+
+        /******************************************************
+         * roleOptions
+         * input: Role
+         * output: arrayList
+         * Purpose: This function will return the string of players
+         * that can fill the role provided, but aren't currently in
+         * it.
+         * 
+         ******************************************************/
         public ArrayList RoleOptions(Role role)
         {
             ArrayList classArray = new ArrayList();
             classArray.Add("List of all players who could fill " + role + " But aren't right now. \n");
+            //we go through each class, looking for the role in question
+            foreach (KeyValuePair<Class, List<Role>> clist in Constants.allowedRolls)
+            {
+                if(clist.Value.Contains(role))
+                {
+                    //when we find a class with the role, we query for the player's class, and if they're not in that role already.
+                    var playerQuery =
+                        from S in Globals.characters
+                        where S.Value.Class_ == clist.Key && S.Value.Role != role
+                        select S;
+                    //we then add our players to our array
+                    foreach(var player in playerQuery)
+                    {
+                        classArray.Add(player.Value.ToString());
+                    }
+
+                }
+
+            }
+            
             return classArray;
 
         }
-
+        /*******************************************************
+         * MaxLevelCount
+         * input: none
+         * output: ArrayList (String)
+         * purpose: This method calls all the characters in every 
+         * guild and checks to see if they are of max level or not
+         * it tallys up the number of players in a guild and then
+         * divides the number of max players by that number.
+         * 
+         ******************************************************/
         public ArrayList MaxLevelCount()
         {
             ArrayList classArray = new ArrayList();
             classArray.Add("Percentage of max level players in their guilds: \n");
+            //go through each guild, and search through players by guildID
+            foreach(KeyValuePair<uint, Guild> guild in Globals.guilds)
+            {
+                double totalMembers = 0;
+                double maxlevels = 0;
+                var playerQuery =
+                    from S in Globals.characters
+                    where S.Value.GuildID == guild.Key
+                    select S;
+                //go through each player in each guild, and identify if they're at max level
+                foreach(var player in playerQuery)
+                {
+                    if (player.Value.Level == Constants.MAX_LEVEL) maxlevels++;
+                    totalMembers++;
+                }
+                //this is a catch to make sure we don't devide by zero. if we find it, take the default of zero
+                if (maxlevels != 0 && totalMembers != 0) maxlevels = maxlevels / totalMembers;
+                classArray.Add(guild.Value.Name + "\t\t" + maxlevels);
+            }
             return classArray;
 
         }
