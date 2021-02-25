@@ -475,6 +475,7 @@ namespace Assignment3
             this.CouldFill_submit_btn.TabIndex = 5;
             this.CouldFill_submit_btn.Text = "Show Results";
             this.CouldFill_submit_btn.UseVisualStyleBackColor = true;
+            this.CouldFill_submit_btn.Click += new System.EventHandler(this.CouldFill_submit_btn_Click);
             // 
             // MaxLvlPlayers_pnl
             // 
@@ -505,6 +506,7 @@ namespace Assignment3
             this.MaxLvlPlayers_submit_btn.TabIndex = 5;
             this.MaxLvlPlayers_submit_btn.Text = "Show Results";
             this.MaxLvlPlayers_submit_btn.UseVisualStyleBackColor = true;
+            this.MaxLvlPlayers_submit_btn.Click += new System.EventHandler(this.MaxLvlPlayers_submit_btn_Click);
             // 
             // query_txt
             // 

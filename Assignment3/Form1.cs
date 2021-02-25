@@ -153,5 +153,42 @@ namespace Assignment3
             foreach (string outLine in Globals.game.GuildTypePrint((GuildType)GuildType_type_cbx.SelectedIndex))
                 query_txt.AppendText(outLine + Environment.NewLine);
         }
+
+        private void CouldFill_submit_btn_Click(object sender, EventArgs e)
+        {
+            /****************************************************************
+             * onClick handler for CouldFill_submit_btn.
+             * 
+             * Checks for a role selection based on the value of role_rbtn_selection
+             * and displays data in query_text based on the output from 
+             * GameFile.RoleOptions() based on that selection.
+             ****************************************************************/
+
+            query_txt.Clear();
+
+            if (role_rbtn_selection == null)
+            {//if role_rbtn_selection is null, display an appropriate error popup and return
+                System.Windows.Forms.MessageBox.Show("Please select a role.");
+                return;
+            }
+
+            foreach (string outLine in Globals.game.RoleOptions((Role)role_rbtn_selection))
+                query_txt.AppendText(outLine + Environment.NewLine);
+        }
+
+        private void MaxLvlPlayers_submit_btn_Click(object sender, EventArgs e)
+        {
+            /****************************************************************
+             * onClick handler for CouldFill_submit_btn.
+             * 
+             * Displays data in query_text based on the output from 
+             * GameFile.RoleOptions().
+             ****************************************************************/
+
+            query_txt.Clear();
+
+            foreach (string outLine in Globals.game.MaxLevelCount())
+                query_txt.AppendText(outLine + Environment.NewLine);
+        }
     }
 }
