@@ -65,10 +65,10 @@ namespace Assignment3
             this.CouldFill_tank_rbtn = new System.Windows.Forms.RadioButton();
             this.CouldFill_lbl = new System.Windows.Forms.Label();
             this.CouldFill_submit_btn = new System.Windows.Forms.Button();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.label21 = new System.Windows.Forms.Label();
-            this.button9 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.MaxLvlPlayers_pnl = new System.Windows.Forms.Panel();
+            this.MaxLvlPlayers_lbl = new System.Windows.Forms.Label();
+            this.MaxLvlPlayers_submit_btn = new System.Windows.Forms.Button();
+            this.query_txt = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.LvlRange_max_nud)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LvlRange_min_nud)).BeginInit();
@@ -79,12 +79,17 @@ namespace Assignment3
             this.GuildType_pnl.SuspendLayout();
             this.CouldFill_pnl.SuspendLayout();
             this.CouldFill_options_pnl.SuspendLayout();
-            this.panel8.SuspendLayout();
+            this.MaxLvlPlayers_pnl.SuspendLayout();
             this.SuspendLayout();
             // 
             // LvlRange_max_nud
             // 
             this.LvlRange_max_nud.Location = new System.Drawing.Point(85, 105);
+            this.LvlRange_max_nud.Maximum = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
             this.LvlRange_max_nud.Name = "LvlRange_max_nud";
             this.LvlRange_max_nud.Size = new System.Drawing.Size(45, 20);
             this.LvlRange_max_nud.TabIndex = 22;
@@ -92,6 +97,11 @@ namespace Assignment3
             // LvlRange_min_nud
             // 
             this.LvlRange_min_nud.Location = new System.Drawing.Point(9, 105);
+            this.LvlRange_min_nud.Maximum = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
             this.LvlRange_min_nud.Name = "LvlRange_min_nud";
             this.LvlRange_min_nud.Size = new System.Drawing.Size(45, 20);
             this.LvlRange_min_nud.TabIndex = 21;
@@ -183,7 +193,7 @@ namespace Assignment3
             this.flowLayoutPanel1.Controls.Add(this.LvlRange_pnl);
             this.flowLayoutPanel1.Controls.Add(this.GuildType_pnl);
             this.flowLayoutPanel1.Controls.Add(this.CouldFill_pnl);
-            this.flowLayoutPanel1.Controls.Add(this.panel8);
+            this.flowLayoutPanel1.Controls.Add(this.MaxLvlPlayers_pnl);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 12);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(492, 633);
@@ -459,45 +469,45 @@ namespace Assignment3
             this.CouldFill_submit_btn.Text = "Show Results";
             this.CouldFill_submit_btn.UseVisualStyleBackColor = true;
             // 
-            // panel8
+            // MaxLvlPlayers_pnl
             // 
-            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel8.Controls.Add(this.label21);
-            this.panel8.Controls.Add(this.button9);
-            this.panel8.Location = new System.Drawing.Point(3, 559);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(489, 69);
-            this.panel8.TabIndex = 6;
+            this.MaxLvlPlayers_pnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.MaxLvlPlayers_pnl.Controls.Add(this.MaxLvlPlayers_lbl);
+            this.MaxLvlPlayers_pnl.Controls.Add(this.MaxLvlPlayers_submit_btn);
+            this.MaxLvlPlayers_pnl.Location = new System.Drawing.Point(3, 559);
+            this.MaxLvlPlayers_pnl.Name = "MaxLvlPlayers_pnl";
+            this.MaxLvlPlayers_pnl.Size = new System.Drawing.Size(489, 69);
+            this.MaxLvlPlayers_pnl.TabIndex = 6;
             // 
-            // label21
+            // MaxLvlPlayers_lbl
             // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.SystemColors.Control;
-            this.label21.Location = new System.Drawing.Point(6, 7);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(265, 17);
-            this.label21.TabIndex = 0;
-            this.label21.Text = "All Class Type from a Single Server";
+            this.MaxLvlPlayers_lbl.AutoSize = true;
+            this.MaxLvlPlayers_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaxLvlPlayers_lbl.ForeColor = System.Drawing.SystemColors.Control;
+            this.MaxLvlPlayers_lbl.Location = new System.Drawing.Point(6, 7);
+            this.MaxLvlPlayers_lbl.Name = "MaxLvlPlayers_lbl";
+            this.MaxLvlPlayers_lbl.Size = new System.Drawing.Size(338, 17);
+            this.MaxLvlPlayers_lbl.TabIndex = 0;
+            this.MaxLvlPlayers_lbl.Text = "Percentage of Max Level Players in All Guilds";
             // 
-            // button9
+            // MaxLvlPlayers_submit_btn
             // 
-            this.button9.Location = new System.Drawing.Point(334, 34);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(96, 23);
-            this.button9.TabIndex = 5;
-            this.button9.Text = "Show Results";
-            this.button9.UseVisualStyleBackColor = true;
+            this.MaxLvlPlayers_submit_btn.Location = new System.Drawing.Point(334, 34);
+            this.MaxLvlPlayers_submit_btn.Name = "MaxLvlPlayers_submit_btn";
+            this.MaxLvlPlayers_submit_btn.Size = new System.Drawing.Size(96, 23);
+            this.MaxLvlPlayers_submit_btn.TabIndex = 5;
+            this.MaxLvlPlayers_submit_btn.Text = "Show Results";
+            this.MaxLvlPlayers_submit_btn.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // query_txt
             // 
-            this.textBox1.Location = new System.Drawing.Point(545, 43);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(651, 601);
-            this.textBox1.TabIndex = 2;
+            this.query_txt.Location = new System.Drawing.Point(545, 43);
+            this.query_txt.Multiline = true;
+            this.query_txt.Name = "query_txt";
+            this.query_txt.ReadOnly = true;
+            this.query_txt.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.query_txt.Size = new System.Drawing.Size(651, 601);
+            this.query_txt.TabIndex = 2;
             // 
             // label4
             // 
@@ -517,10 +527,11 @@ namespace Assignment3
             this.BackColor = System.Drawing.SystemColors.Desktop;
             this.ClientSize = new System.Drawing.Size(1208, 669);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.query_txt);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "Form1";
             this.Text = "World of ConflictCraft: Querying System";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.LvlRange_max_nud)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LvlRange_min_nud)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
@@ -536,8 +547,8 @@ namespace Assignment3
             this.CouldFill_pnl.PerformLayout();
             this.CouldFill_options_pnl.ResumeLayout(false);
             this.CouldFill_options_pnl.PerformLayout();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
+            this.MaxLvlPlayers_pnl.ResumeLayout(false);
+            this.MaxLvlPlayers_pnl.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -580,10 +591,10 @@ namespace Assignment3
         private System.Windows.Forms.RadioButton CouldFill_tank_rbtn;
         private System.Windows.Forms.Label CouldFill_lbl;
         private System.Windows.Forms.Button CouldFill_submit_btn;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Panel MaxLvlPlayers_pnl;
+        private System.Windows.Forms.Label MaxLvlPlayers_lbl;
+        private System.Windows.Forms.Button MaxLvlPlayers_submit_btn;
+        private System.Windows.Forms.TextBox query_txt;
         private System.Windows.Forms.Label label4;
     }
 }
