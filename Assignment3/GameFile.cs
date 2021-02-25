@@ -593,6 +593,41 @@ namespace Assignment3
         *************************************************************************/
 
         /************************************************************************
+         * classCount
+         * inputs: Class, string (server name)
+         * output: ArrayList(string)
+         * Purpose: takes the class and server the user selects and returns 
+         * a list of all of the users in said server
+         * 
+         ************************************************************************/
+        public ArrayList classCount(Class pClass, string server)
+        {
+            ArrayList classArray = new ArrayList();
+            var guildQuery =
+               from S in Globals.guilds
+               where S.Value.Server.CompareTo(server) == 0
+               select S.Key;// we store the names of those guilds in the servers in the serverQuery Var
+            classArray.Add("List of Players in "+ pClass +"\n");
+            foreach(uint gId in guildQuery)
+            {
+                var playerQuery =
+                    from S in Globals.characters
+                    where S.Value.GuildID == gId && S.Value.Class_ == pClass
+                    select S;
+                foreach(var player in playerQuery)
+                {
+                    classArray.Add(player.Value.ToString());
+                }
+            }
+            return classArray;
+
+        }
+
+
+
+
+
+        /************************************************************************
          * racePercentage
          * input: string server name
          * output: arraylist of strings
@@ -643,5 +678,7 @@ namespace Assignment3
             return guildList;
 
         }
+
+        
     }
 }
