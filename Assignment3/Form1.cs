@@ -72,6 +72,8 @@ namespace Assignment3
              * GameFile.RacePercent() based on that selection.
              ****************************************************************/
 
+            query_txt.Clear();
+
             if (RacePercentage_server_cbx.SelectedIndex == -1)
             {//if there is no server selected, display an appropriate error popup and return
                 System.Windows.Forms.MessageBox.Show("Please select a server.");
@@ -92,6 +94,8 @@ namespace Assignment3
              * and displays data in query_text based on the output from 
              * GameFile.ClassCount() based on those selections.
              ****************************************************************/
+
+            query_txt.Clear();
 
             if (ServerClassType_class_cbx.SelectedIndex == -1 || ServerClassType_server_cbx.SelectedIndex == -1)
             {//if there is no class or server selected, display an appropriate error popup and return
@@ -115,6 +119,8 @@ namespace Assignment3
              * GameFile.RoleCall() based on those selections.
              ****************************************************************/
 
+            query_txt.Clear();
+
             if (LvlRange_role_cbx.SelectedIndex == -1 || LvlRange_server_cbx.SelectedIndex == -1)
             {//if there is no role or server selected, display an appropriate error popup and return
                 System.Windows.Forms.MessageBox.Show("Please select a role and server.");
@@ -135,6 +141,8 @@ namespace Assignment3
              * and displays data in query_text based on the output from 
              * GameFile.GuildTypePrint() based on that selection.
              ****************************************************************/
+
+            query_txt.Clear();
 
             if (GuildType_type_cbx.SelectedIndex == -1)
             {//if there is no type selected, display an appropriate error popup and return
