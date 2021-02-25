@@ -714,7 +714,7 @@ namespace Assignment3
          * input: GuildType
          * output: ArrayList (String)
          * purpose: to list off all the guilds of the type 
-         * selected by the user
+         * selected by the user 
          * 
          ****************************************************/
         public ArrayList GuildTypePrint(GuildType type)
@@ -732,5 +732,20 @@ namespace Assignment3
             return classArray;
         }
         
+        public ArrayList RoleOptions(Role role)
+        {
+            ArrayList classArray = new ArrayList();
+            classArray.Add("List of all players who could fill " + role + " But aren't right now. \n");
+            return classArray;
+
+        }
+
+        public ArrayList MaxLevelCount()
+        {
+            ArrayList classArray = new ArrayList();
+            classArray.Add("Percentage of max level players in their guilds: \n");
+            return classArray;
+
+        }
     }
 }
