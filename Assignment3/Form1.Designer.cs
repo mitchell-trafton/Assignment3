@@ -424,6 +424,7 @@ namespace Assignment3
             this.CouldFill_damage_rbtn.TabStop = true;
             this.CouldFill_damage_rbtn.Text = "Damage";
             this.CouldFill_damage_rbtn.UseVisualStyleBackColor = true;
+            this.CouldFill_damage_rbtn.CheckedChanged += new System.EventHandler(this.Role_Selected);
             // 
             // CouldFill_healer_rbtn
             // 
@@ -436,6 +437,7 @@ namespace Assignment3
             this.CouldFill_healer_rbtn.TabStop = true;
             this.CouldFill_healer_rbtn.Text = "Healer";
             this.CouldFill_healer_rbtn.UseVisualStyleBackColor = true;
+            this.CouldFill_healer_rbtn.CheckedChanged += new System.EventHandler(this.Role_Selected);
             // 
             // CouldFill_tank_rbtn
             // 
@@ -448,6 +450,7 @@ namespace Assignment3
             this.CouldFill_tank_rbtn.TabStop = true;
             this.CouldFill_tank_rbtn.Text = "Tank";
             this.CouldFill_tank_rbtn.UseVisualStyleBackColor = true;
+            this.CouldFill_tank_rbtn.CheckedChanged += new System.EventHandler(this.Role_Selected);
             // 
             // CouldFill_lbl
             // 

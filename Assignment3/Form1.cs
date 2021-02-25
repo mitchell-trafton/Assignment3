@@ -12,6 +12,8 @@ namespace Assignment3
 {
     public partial class Form1 : Form
     {
+        Role? role_rbtn_selection = null; //currently selected role from the three radio buttons; null if none selected
+
         public Form1()
         {
             InitializeComponent();
@@ -47,6 +49,17 @@ namespace Assignment3
                 else GuildType_type_cbx.Items.Add(Enum.GetName(typeof(GuildType), t));
             }
                 
+        }
+
+        private void Role_Selected(object sender, EventArgs e)
+        {
+            /*****************************************************************
+             * CheckedChanged handler for Form1's radio buttons.
+             * 
+             * Changes the value of role_rbtn_selection based on which role
+             * was selected.
+             *****************************************************************/
+            role_rbtn_selection = (Role)((RadioButton)sender).TabIndex;
         }
     }
 }
