@@ -69,7 +69,7 @@ namespace Assignment3
              * 
              * Checks for a server selection from RacePercentage_Server_cbx, 
              * and displays data in query_text based on the output from 
-             * GameFile.racePercent() based on that selection.
+             * GameFile.RacePercent() based on that selection.
              ****************************************************************/
 
             if (RacePercentage_server_cbx.SelectedIndex == -1)
@@ -90,7 +90,7 @@ namespace Assignment3
              * Checks for a class and server selection from 
              * ServerClassType_class_cbx and ServerClassType_server_cbx, 
              * and displays data in query_text based on the output from 
-             * GameFile.classCount() based on those selections.
+             * GameFile.ClassCount() based on those selections.
              ****************************************************************/
 
             if (ServerClassType_class_cbx.SelectedIndex == -1 || ServerClassType_server_cbx.SelectedIndex == -1)
@@ -100,6 +100,29 @@ namespace Assignment3
             }
 
             foreach (string outLine in Globals.game.ClassCount((Class)ServerClassType_class_cbx.SelectedIndex, ServerClassType_server_cbx.SelectedItem.ToString()))
+                query_txt.AppendText(outLine + Environment.NewLine);
+        }
+
+        private void LvlRange_submit_btn_Click(object sender, EventArgs e)
+        {
+            /****************************************************************
+             * onClick handler for LvlRange_submit_btn.
+             * 
+             * Checks for a role and server selection from 
+             * LvlRange_role_cbx and LvlRange_server_cbx, as
+             * well as a min and max from the two NumericUpDown containers,
+             * and displays data in query_text based on the output from 
+             * GameFile.RoleCall() based on those selections.
+             ****************************************************************/
+
+            if (LvlRange_role_cbx.SelectedIndex == -1 || LvlRange_server_cbx.SelectedIndex == -1)
+            {//if there is no role or server selected, display an appropriate error popup and return
+                System.Windows.Forms.MessageBox.Show("Please select a role and server.");
+                return;
+            }
+
+            foreach (string outLine in Globals.game.RoleCall((Role)LvlRange_role_cbx.SelectedIndex, LvlRange_server_cbx.SelectedItem.ToString(),
+                                                             (uint)LvlRange_min_nud.Value, (uint)LvlRange_max_nud.Value))
                 query_txt.AppendText(outLine + Environment.NewLine);
         }
     }

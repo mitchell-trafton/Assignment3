@@ -341,6 +341,7 @@ namespace Assignment3
             this.LvlRange_submit_btn.TabIndex = 5;
             this.LvlRange_submit_btn.Text = "Show Results";
             this.LvlRange_submit_btn.UseVisualStyleBackColor = true;
+            this.LvlRange_submit_btn.Click += new System.EventHandler(this.LvlRange_submit_btn_Click);
             // 
             // GuildType_pnl
             // 
