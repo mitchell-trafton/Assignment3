@@ -8,6 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/************************************************************
+* Assignment 3
+* Programmers: Robert Tyler Trotter z1802019
+*              Mitchell Trafton     z1831076
+***********************************************************/
+
 namespace Assignment3
 {
     public partial class Form1 : Form
